@@ -20,7 +20,7 @@ export class RpgMe extends DDDSuper(I18NMixin(LitElement)) {
     this.characterSettings = {
       seed: "00000000",
       base: 0, 
-      mouth: 0,
+      face: 0,
       faceitem: 0,
       hair: 0,
       pants: 0,
@@ -69,6 +69,20 @@ export class RpgMe extends DDDSuper(I18NMixin(LitElement)) {
         width: var(--character-size, 200px);
       }
 
+      .seedDisplay{
+        position: absolute;
+        top: calc(-1 * var(--ddd-spacing-7));
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: var(--ddd-theme-default-white);
+        padding: var(--ddd-spacing-1) var(--ddd-spacing-2);
+        border-radius: var(--ddd-spacing-1);
+        font-size: 0.9rem;
+        font-weight: bold;
+        pointer-events: none;
+      }
+
       .customizationControls {
         margin-top: var(--ddd-spacing-12);
         margin-right: var(--ddd-spacing-10);
@@ -112,6 +126,7 @@ export class RpgMe extends DDDSuper(I18NMixin(LitElement)) {
     
       <div class="container">
         <div class="characterDisplay">
+          <div class="seedDisplay"> Seed: ${this.characterSettings.seed}</div>
 
           <!-- Styles from @haxtheweb/rpg-character -->
           <rpg-character
