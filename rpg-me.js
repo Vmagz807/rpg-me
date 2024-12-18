@@ -76,6 +76,10 @@ export class RpgMe extends DDDSuper(I18NMixin(LitElement)) {
         text-align: left;
       } 
 
+      wired-toggle{
+        opacity: 1;
+      }
+      
       wired-checkbox {
         margin-top: var(--ddd-spacing-5);
         cursor: pointer;
@@ -91,7 +95,6 @@ export class RpgMe extends DDDSuper(I18NMixin(LitElement)) {
         display: block;
         margin-bottom: var(--ddd-spacing-4);
         max-width: 300px;
-        
       }
 
       label {
@@ -100,7 +103,6 @@ export class RpgMe extends DDDSuper(I18NMixin(LitElement)) {
         font-weight: bold;
         margin-bottom: var(--ddd-spacing-1);
       }
-
     `];
   }
 
